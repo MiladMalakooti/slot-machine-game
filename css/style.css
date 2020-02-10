@@ -1,0 +1,58 @@
+body{
+    background: ##00aa77;
+    background-image: url("https://imgur.com/jZVwGot.png"), url("https://imgur.com/jZVwGot.png");
+    background-repeat: repeat-x, repeat;
+    }
+
+    #slotMachineBody {    
+        background-color: #054c5c;
+        width: 900px;
+        height: 350px;
+        border: 15px solid #150467;
+        border-radius: 50px;
+        padding: 50px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .roller {
+        background-color: lightgray;
+        width: 120px;
+        height: 160px;
+        border: 5px solid silver;
+        border-radius: 5px;
+        margin: auto;
+    }
+    #middleBox {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    #leftBox {
+        margin-right: 20px;
+    }
+    #rightBox {
+        margin-left: 20px;
+    }
+    
+    .rollerContainer {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+    }
+.display { /* h1, h2 */  
+    text-align: center;
+   
+}
+.emoji {
+    font-size:80px
+}
+
+.emojies {
+    top: 1%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
