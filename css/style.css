@@ -11,8 +11,12 @@ Button generator:
   https://codemyui.com/slot-machine-text-animation/
   
   */
+/* fonts:  */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url(http://allfont.net/allfont.css?fonts=digital-7);
 
 body{
+    text-align: center;
     background: ##00aa77;
     background-image: url("https://imgur.com/jZVwGot.png"), url("https://imgur.com/jZVwGot.png");
     background-repeat: repeat-x, repeat;
@@ -109,3 +113,42 @@ body{
       position:relative;
       top:5px;
   }
+
+  #gamePlayedBox{
+        position: absolute;
+        left: 250px;
+        top: 177px;
+
+        background-color: gray;
+        width: 200px;
+        height: 50px;
+        border: 5px solid silver;
+        border-radius: 5px;
+        margin: auto;
+        /* box-shadow:
+        0 0 60px 30px #ffffff29, 
+        0px 0px 20px 7px #0ff3; */
+  }
+  #gamePlayed{
+    font-family: 'Sriracha', sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+    position: absolute;
+    top: -34px;
+    left: 6px;
+  }
+
+  p {
+    position: absolute;
+    top: 80px;
+    left: 466px;
+    font-family: 'Fake Hope Regular';
+    font-size: 90px;
+    }
+    @font-face {
+        font-family: 'Fake Hope Regular';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Fake Hope Regular'), url('FakeHope.woff') format('woff');
+        }
+    
