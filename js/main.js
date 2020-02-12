@@ -1,7 +1,7 @@
 let reels=['cherry', 'flower', 'popcorn', 'candle', 'socks',
 'lemon','dollar','nerd','tooth','wink'];
 
-let emojiCodes = {
+let emojiCodes = {   // names and emojies
     cherry: "🍒",
     flower: "💐",
     popcorn: "🍿",
@@ -24,15 +24,18 @@ let middleBox = document.getElementById("middleBox")
 let rightBox = document.getElementById("rightBox")
 
 //
+let timesPlayed=-1;
 function appendEls(){
     slot1 = rand()
     slot2 = rand()
     slot3 = rand()
 
     
+    
     let arr = [slot1,slot2,slot3]
     console.log(slot1,slot2,slot3)
-     let boxes =[leftBox, middleBox, rightBox]   
+    
+    let boxes =[leftBox, middleBox, rightBox]   
         
         for (let i=0; i<arr.length;i++){
             let div = document.createElement("DIV")
@@ -41,25 +44,30 @@ function appendEls(){
             div.innerText = emojiCodes[arr[i]]
             boxes[i].appendChild(div)
         }
-
-        console.log("right box: ",rightBox);
-        // rightBox.appendChild(div);
-        
-        console.log("left box: ",leftBox);
-        // leftBox.appendChild(div);
-
-        
-        console.log("middle box: ", middleBox);
-        // middleBox.appendChild(div);
-
-
-        
-    // }
-   
-
+        console.log(timesPlayed)
+    increaseTimesPlayed()
 }
+
+
+document.getElementById("beginButton").addEventListener("click", appendEls)
+    
 appendEls()
+    
 
 
 
+function win(){
+    console.log('You won!')
+}
+    if (slot1==slot2 && slot2==slot3 && slot1==slot3){
+        win();
+    } else if (slot1==slot2 || slot2==slot3 || slot1==slot3){
+        console.log('Two matches')
+    }
 
+function increaseTimesPlayed() {
+    timesPlayed++;
+    document.getElementById("countPlayed").innerHTML = timesPlayed;
+}
+
+console.log(timesPlayed);
