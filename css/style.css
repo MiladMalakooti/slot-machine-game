@@ -1,3 +1,17 @@
+/* Resources:  
+Button generator:
+  https://www.lucidcrew.com/css-button-generator/
+  https://cssbuttoncreator.com/
+
+  Glow and Blur effect:
+  https://codersblock.com/blog/creating-glow-effects-with-css/
+  
+  
+  Animation:
+  https://codemyui.com/slot-machine-text-animation/
+  
+  */
+
 body{
     background: ##00aa77;
     background-image: url("https://imgur.com/jZVwGot.png"), url("https://imgur.com/jZVwGot.png");
@@ -18,11 +32,14 @@ body{
     
     .roller {
         background-color: lightgray;
-        width: 120px;
-        height: 160px;
+        width: 100px;
+        height: 90px;
         border: 5px solid silver;
         border-radius: 5px;
         margin: auto;
+        box-shadow:
+        0 0 60px 30px #ffffff29, 
+        0px 0px 20px 7px #0ff3;
     }
     #middleBox {
         margin-left: 0px;
@@ -46,13 +63,47 @@ body{
    
 }
 .emoji {
-    font-size:80px
+    font-size:80px;
+    margin-top: -6px;
+    margin-left: 13px;
+
 }
 
 .emojies {
-    top: 1%;
+    right: 582px;
+    top: 125px;
     position: relative;
     display: flex;
     flex-direction: column;
-  }
 
+  }
+  #beginButton {
+    height: 30px;
+      background-color:#fe1a00;
+      border-top-left-radius:6px;
+      border-top-right-radius:6px;
+      border-bottom-right-radius:6px;
+      border-bottom-left-radius:6px;
+      text-indent:0px;
+      border:1px solid #d83526;
+      display:inline-block;
+      color:#ffffff;
+      font-family:Arial;
+      font-size:15px;
+      font-weight:bold;
+      font-style:normal;
+      padding-top:15px;
+      padding-bottom:15px;
+      padding-left:15px;
+      padding-right:15px;
+      text-decoration:none;
+      text-align:center;
+      text-shadow:1px 1px 0px #b23e35;
+  }
+  #beginButton:hover {
+      background-color:#ce0100;
+  }
+  #beginButton:active {
+      position:relative;
+      top:5px;
+  }
