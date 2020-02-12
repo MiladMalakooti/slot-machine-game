@@ -37,15 +37,18 @@ function appendEls(){
     
     let boxes =[leftBox, middleBox, rightBox]   
         
-        for (let i=0; i<arr.length;i++){
-            let div = document.createElement("DIV")
-            div.setAttribute("id", arr[i])
-            div.setAttribute("class", "emoji")
-            div.innerText = emojiCodes[arr[i]]
-            boxes[i].appendChild(div)
-        }
-        console.log(timesPlayed)
-    increaseTimesPlayed()
+    for (let i=0; i<arr.length;i++){
+        let div = document.createElement("DIV")
+        div.setAttribute("id", arr[i])
+        div.setAttribute("class", "emoji")
+        div.innerText = emojiCodes[arr[i]]
+        boxes[i].appendChild(div)
+    }
+
+    win()
+       
+    increaseTimesPlayed(); 
+    console.log(timesPlayed);
 }
 
 
@@ -54,16 +57,14 @@ document.getElementById("beginButton").addEventListener("click", appendEls)
 appendEls()
     
 
-
-
 function win(){
-    console.log('You won!')
-}
-    if (slot1==slot2 && slot2==slot3 && slot1==slot3){
-        win();
+    // console.log('You won!')
+    if (slot1 == slot2 && slot2==slot3){
+        console.log('Jackpot!')
     } else if (slot1==slot2 || slot2==slot3 || slot1==slot3){
-        console.log('Two matches')
+        console.log('Two matches') 
     }
+}
 
 function increaseTimesPlayed() {
     timesPlayed++;
@@ -71,3 +72,12 @@ function increaseTimesPlayed() {
 }
 
 console.log(timesPlayed);
+
+
+// function removePlayed(){
+    
+// }
+
+// function myFunction() {
+//     var list = document.getElementById("myList");
+//     list.removeChild(list.childNodes[0]);
