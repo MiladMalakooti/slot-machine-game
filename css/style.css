@@ -21,6 +21,8 @@ body{
     background-image: url("https://imgur.com/jZVwGot.png"), url("https://imgur.com/jZVwGot.png");
     background-repeat: repeat-x, repeat;
     }
+h1 {font-family: "Comic Sans MS", cursive, sans-serif	
+}
 
 
 
@@ -66,7 +68,6 @@ body{
     }
 .display { /* h1, h2 */  
     text-align: center;
-   
 }
 .emoji {
     font-size:80px;
@@ -145,6 +146,11 @@ body{
     font-family: 'Fake Hope Regular';
     font-size: 90px;
     }
+h3, footer{
+    font-family: 'Times-New-Roman';
+    font-size: 15px;
+}
+
     @font-face {
         font-family: 'Fake Hope Regular';
         font-style: normal;
@@ -152,3 +158,7 @@ body{
         src: local('Fake Hope Regular'), url('FakeHope.woff') format('woff');
         }
     
+
+        .link :hover{
+            background-color: red;
+        }
