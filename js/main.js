@@ -105,7 +105,7 @@ function resetGame(){
 }
 
 function win() {
-    // console.log('You won!')
+    console.log('You won!')
     if (slot1 == slot2 && slot2 == slot3) {
         console.log('Jackpot!')
     
