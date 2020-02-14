@@ -1,3 +1,18 @@
+document.getElementById("start").addEventListener("click", overlay)
+
+
+function overlay(){ 
+    console.log("hit   ")
+    let sit=-1;
+    if (sit!=-1){
+        sit=1;
+    }
+    document.getElementById('coolImage').style.zIndex=sit;
+}
+
+
+
+// function startGame(){
 let reels = ['cherry', 'flower', 'popcorn', 'candle', 'socks',
     'lemon', 'dollar', 'nerd', 'tooth', 'wink'];
 
@@ -55,7 +70,9 @@ function appendEls() {
 }
 
 
-document.getElementById("beginButton").addEventListener("click", appendEls)
+document.getElementById("beginButton").addEventListener("click", appendEls);
+
+
 
 
 appendEls()
@@ -76,12 +93,4 @@ function increaseTimesPlayed() {
 }
 
 console.log(timesPlayed);
-
-
-// function removePlayed(){
-
 // }
-
-// function myFunction() {
-//     var list = document.getElementById("myList");
-//     list.removeChild(list.childNodes[0]);
