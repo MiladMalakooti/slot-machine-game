@@ -1,18 +1,16 @@
-document.getElementById("start").addEventListener("click", overlay)
+document.getElementById("start").addEventListener("click", overlay);
+document.getElementById("resetButton").addEventListener("click", startGame);
 
+document.getElementById('coolImage').style.zIndex=5;
 
 function overlay(){ 
-    console.log("hit   ")
     let sit=-1;
-    if (sit!=-1){
-        sit=1;
-    }
     document.getElementById('coolImage').style.zIndex=sit;
-}
+    }
 
 
 
-// function startGame(){
+function startGame(){
 let reels = ['cherry', 'flower', 'popcorn', 'candle', 'socks',
     'lemon', 'dollar', 'nerd', 'tooth', 'wink'];
 
@@ -87,10 +85,11 @@ function win() {
         console.log('Two matches') }
 }
 
+
 function increaseTimesPlayed() {
     timesPlayed++;
     document.getElementById("countPlayed").innerHTML = timesPlayed;
 }
 
 console.log(timesPlayed);
-// }
+}
