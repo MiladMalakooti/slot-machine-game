@@ -1,20 +1,27 @@
 document.getElementById("start").addEventListener("click", overlay);
-document.getElementById("resetButton").addEventListener("click", startGame);
+document.getElementById("resetButton").addEventListener("click", resetGame);
+document.getElementById("beginButton").addEventListener("click", (new startGame()).appendEls);
 
 document.getElementById('coolImage').style.zIndex=5;
+
+
+
 
 function overlay(){ 
     let sit=-1;
     document.getElementById('coolImage').style.zIndex=sit;
-    }
-
+    let empty= " ";
+    document.getElementById("leftBox").innerHTML = empty; 
+    document.getElementById("rightBox").innerHTML = empty; 
+    document.getElementById("middleBox").innerHTML = empty; 
+}
 
 
 function startGame(){
 let reels = ['cherry', 'flower', 'popcorn', 'candle', 'socks',
     'lemon', 'dollar', 'nerd', 'tooth', 'wink'];
 
-let emojiCodes = {   // names and emojies
+ emojiCodes = {   // names and emojies
     cherry: "🍒",
     flower: "💐",
     popcorn: "🍿",
@@ -76,15 +83,6 @@ document.getElementById("beginButton").addEventListener("click", appendEls);
 appendEls()
 
 
-function win() {
-    // console.log('You won!')
-    if (slot1 == slot2 && slot2 == slot3) {
-        console.log('Jackpot!')
-    }
-     else if (slot1==slot2 || slot2==slot3 || slot1==slot3){
-        console.log('Two matches') }
-}
-
 
 function increaseTimesPlayed() {
     timesPlayed++;
@@ -92,4 +90,32 @@ function increaseTimesPlayed() {
 }
 
 console.log(timesPlayed);
+}
+
+function resetGame(){
+    console.log('resetGame');
+    timesPlayed=0;
+    document.getElementById("countPlayed").innerHTML = timesPlayed; 
+    let empty= " ";
+    document.getElementById("leftBox").innerHTML = empty; 
+    document.getElementById("rightBox").innerHTML = empty; 
+    document.getElementById("middleBox").innerHTML = empty; 
+
+
+}
+
+function win() {
+    // console.log('You won!')
+    if (slot1 == slot2 && slot2 == slot3) {
+        console.log('Jackpot!')
+    
+    document.getElementById("winningText").innerHTML = "You Won!";
+    var list = document.getElementById("resetButton").addEventListener("click", resetGame);
+    list.removeChild(list.childNodes[0]);
+
+    var list1 = document.getElementById("beginButton").addEventListener("click", (new startGame()).appendEls);
+    list1.removeChild(list1.childNodes[0]);
+    }
+     else if (slot1==slot2 || slot2==slot3 || slot1==slot3){
+        console.log('Two matches') }
 }
