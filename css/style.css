@@ -1,28 +1,23 @@
-/* Resources:  
-Button generator:
-  https://www.lucidcrew.com/css-button-generator/
-  https://cssbuttoncreator.com/
-
-  Glow and Blur effect:
-  https://codersblock.com/blog/creating-glow-effects-with-css/
-  
-  
-  Animation:
-  https://codemyui.com/slot-machine-text-animation/
-  
-  */
 /* fonts:  */
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url(http://allfont.net/allfont.css?fonts=digital-7);
 
 body{
     text-align: center;
-    background: ##00aa77;
+    background: #00aa77;
     background-image: url("https://imgur.com/jZVwGot.png"), url("https://imgur.com/jZVwGot.png");
     background-repeat: repeat-x, repeat;
     }
 h1 {font-family: "Comic Sans MS", cursive, sans-serif	
 }
+
+h1 {font-family: "Comic Sans MS", cursive, sans-serif	
+    }
+    img {
+        position: absolute;
+        left: 200px;
+         top: 137px;
+    }
 
 
 
@@ -37,7 +32,6 @@ h1 {font-family: "Comic Sans MS", cursive, sans-serif
         display: flex;
         flex-direction: row;
     }
-    
     .roller {
         background-color: lightgray;
         width: 100px;
@@ -65,6 +59,7 @@ h1 {font-family: "Comic Sans MS", cursive, sans-serif
       display: flex;
       flex-direction: row;
       margin: auto;
+      margin-right: 100px;
     }
 .display { /* h1, h2 */  
     text-align: center;
@@ -84,7 +79,7 @@ h1 {font-family: "Comic Sans MS", cursive, sans-serif
     flex-direction: column;
 
   }
-  #beginButton {
+  #beginButton, #start, #resetButton {
     height: 30px;
       background-color:#fe1a00;
       border-top-left-radius:6px;
@@ -100,21 +95,25 @@ h1 {font-family: "Comic Sans MS", cursive, sans-serif
       font-weight:bold;
       font-style:normal;
       padding-top:15px;
-      padding-bottom:15px;
+      padding-bottom:3px;
       padding-left:15px;
       padding-right:15px;
       text-decoration:none;
       text-align:center;
       text-shadow:1px 1px 0px #b23e35;
   }
-  #beginButton:hover {
+
+  #start{
+    padding-bottom: 3px;
+    padding-top: 16px;
+  }
+  #beginButton, #start,#resetButton :hover {
       background-color:#ce0100;
   }
-  #beginButton:active {
-      position:relative;
-      top:5px;
-  }
-
+  
+#start{
+    top: -8px;
+}
   #gamePlayedBox{
         position: absolute;
         left: 250px;
@@ -158,7 +157,29 @@ h3, footer{
         src: local('Fake Hope Regular'), url('FakeHope.woff') format('woff');
         }
     
-
+        .link{
+            color: blue;
+        }
         .link :hover{
             background-color: red;
+            font-style: italic;
         }
+
+#resetButton{
+    position: relative;
+    top: 315px;
+    left: -800px;
+}
+#beginButton{
+    position: relative;
+    left: 120px;
+    top: 150px;
+}
+
+#winningText{
+    top: 260px;
+    left: 350px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    position: relative;
+}
