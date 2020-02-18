@@ -108,7 +108,7 @@ h1 {font-family: "Comic Sans MS", cursive, sans-serif
   #beginButton, #start,#resetButton :hover {
       background-color:#ce0100;
   }
-  }
+  
 #start{
     top: -8px;
 }
